@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /documentos/
+
+Sitemap: https://inversionesjyf.com/sitemap.xml
