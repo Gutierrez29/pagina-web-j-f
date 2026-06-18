@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cargando Proyecto... - J&F Hrnos</title>
+    <meta name="description" content="Detalle de proyecto ejecutado por Inversiones y Representaciones J&F Hrnos S.A.C. Ingeniería, construcción y mantenimiento.">
+    <link rel="icon" type="image/webp" href="img/logo/logo.webp">
+    <link rel="apple-touch-icon" href="img/logo/logo.webp">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        .project-detail-hero {
+            background-color: var(--blue-dark);
+            background-position: center;
+            background-size: cover;
+            height: 380px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-badge {
+            background: var(--blue-accent);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .project-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 900px) {
+            .project-layout {
+                grid-template-columns: 1fr;
+                padding: 30px 15px;
+                gap: 30px;
+            }
+
+            .hero-title {
+                font-size: 2.2rem !important;
+            }
+
+            .project-detail-hero {
+                height: 250px;
+            }
+
+            .tech-list {
+                grid-template-columns: 1fr !important;
+            }
+
+            .sidebar {
+                position: static;
+            }
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--blue-accent);
+            text-decoration: none;
+            font-weight: bold;
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.1rem;
+            transition: 0.3s;
+            position: sticky;
+            top: 100px;
+            z-index: 10;
+            background: rgba(248, 250, 252, 0.9);
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        .back-btn:hover {
+            text-decoration: underline;
+            color: var(--blue-dark);
+            transform: translateX(-5px);
+            display: inline-block;
+        }
+
+        .main-content h2 {
+            color: var(--blue-dark);
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        .main-content p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: var(--text-dark);
+            margin-bottom: 30px;
+            text-align: justify;
+        }
+
+        .tech-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .tech-item {
+            background: #f8fafc;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--blue-accent);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .tech-item i {
+            color: var(--blue-accent);
+            font-size: 1.2rem;
+        }
+
+        .tech-item span {
+            font-weight: 600;
+            color: var(--blue-dark);
+        }
+
+        .project-gallery img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .sidebar {
+            position: sticky;
+            top: 100px;
+            align-self: start;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .sidebar-card {
+            background: white;
+            border-radius: 12px;
+            padding: 35px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .sidebar-card h3 {
+            color: var(--blue-dark);
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .info-row {
+            margin-bottom: 20px;
+        }
+
+        .info-row span.label {
+            display: block;
+            font-size: 0.9rem;
+            color: #718096;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 5px;
+        }
+
+        .info-row span.value {
+            display: block;
+            font-size: 1.1rem;
+            color: var(--blue-dark);
+            font-weight: 600;
+        }
+
+        .info-row i {
+            color: var(--blue-accent);
+            margin-right: 8px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .btn-official {
+            display: block;
+            background: var(--blue-dark);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 6px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-top: 30px;
+            transition: 0.3s;
+        }
+
+        .btn-official:hover {
+            background: var(--blue-accent);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 168, 255, 0.3);
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, var(--blue-accent), var(--blue-dark));
+            border-radius: 12px;
+            padding: 35px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .cta-box h4 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: white;
+            font-weight: 700;
+        }
+
+        .cta-box p {
+            font-size: 1.05rem;
+            margin-bottom: 25px;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        .btn-cta {
+            display: block;
+            background: white;
+            color: var(--blue-dark);
+            padding: 15px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: 0.3s;
+        }
+
+        .btn-cta:hover {
+            background: #f8fafc;
+            color: var(--blue-accent);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+    <header class="header">
+        <div class="container header-flex">
+            <div class="logo-container">
+                <a href="index.html"><img src="img/logo/logo.webp" alt="Logo J&F" class="logo-img"></a>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html#inicio">Inicio</a></li>
+                    <li><a href="index.html#experiencia">Volver a Proyectos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="project-detail-hero" id="hero-bg">
+        <div class="container">
+            <span class="hero-badge" id="proj-cat">Categoría</span>
+            <h1 class="hero-title" id="proj-title" style="font-size: 3.5rem; margin-bottom: 0; padding: 0 15px;">
+                Cargando...</h1>
+        </div>
+    </div>
+
+    <div class="project-layout">
+        <div class="main-content reveal-left">
+            <a href="index.html#experiencia" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Volver al listado
+                de proyectos</a>
+
+            <h2>Memoria Descriptiva</h2>
+            <p id="proj-desc">Cargando la descripción del proyecto...</p>
+
+            <h3 style="color: var(--blue-dark); margin-bottom: 20px; font-size: 1.5rem;"><i class="fa-solid fa-gears"
+                    style="color: var(--blue-accent);"></i> Puntos Clave de Ejecución</h3>
+            <div class="tech-list">
+                <div class="tech-item"><i class="fa-solid fa-check"></i> <span id="tech-1">...</span></div>
+                <div class="tech-item"><i class="fa-solid fa-check"></i> <span id="tech-2">...</span></div>
+                <div class="tech-item"><i class="fa-solid fa-shield-halved"></i> <span id="tech-3">...</span></div>
+                <div class="tech-item"><i class="fa-solid fa-leaf"></i> <span>Protección Medioambiental</span></div>
+            </div>
+
+            <div class="project-gallery">
+                <img id="proj-img" src="" alt="Vista del Proyecto">
+            </div>
+        </div>
+
+        <aside class="sidebar">
+            <div class="sidebar-card reveal-right">
+                <h3>Ficha Técnica</h3>
+
+                <div class="info-row">
+                    <span class="label">Cliente / Entidad</span>
+                    <span class="value"><i class="fa-solid fa-building"></i> <span id="proj-client">...</span></span>
+                </div>
+
+                <div class="info-row">
+                    <span class="label">Ubicación de Obra</span>
+                    <span class="value"><i class="fa-solid fa-location-dot"></i> <span
+                            id="proj-location">...</span></span>
+                </div>
+
+                <div class="info-row">
+                    <span class="label">Estado del Proyecto</span>
+                    <span class="value" style="color: #38a169;"><i class="fa-solid fa-circle-check"></i> Ejecutado con
+                        Éxito</span>
+                </div>
+
+                <a id="proj-url" href="#" target="_blank" class="btn-official">
+                    <i class="fa-solid fa-globe"></i> Ver Portal Web Oficial
+                </a>
+            </div>
+
+            <div class="cta-box reveal-right delay-1">
+                <h4><i class="fa-solid fa-handshake"></i> ¿Tienes un proyecto similar?</h4>
+                <p>Nuestro equipo de ingeniería está listo para brindarte la mejor solución técnica y operativa para tu
+                    obra.</p>
+                <a href="index.html#contacto" class="btn-cta">Cotizar Proyecto</a>
+            </div>
+        </aside>
+    </div>
+
+    <footer id="contacto" class="footer">
+        <div class="container footer-grid">
+
+            <div class="footer-brand">
+                <img src="img/logo/logo.webp" alt="Logo Footer" class="logo-img-footer">
+                <p class="footer-ruc">RUC: 20600435044</p>
+                <h3 class="footer-company-name">Inversiones y Representaciones J & F Hrnos S.A.C.</h3>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Contacto y Cotizaciones</h4>
+                <p><strong>Nuestros Datos</strong></p>
+                <p><i class="fa-regular fa-envelope"></i> Emails: <br> <a
+                        href="https://mail.google.com/mail/?view=cm&fs=1&to=residencia@inversionesjyf.com"
+                        target="_blank">residencia@inversionesjyf.com</a> <br>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gerencia@inversionesjyf.com"
+                        target="_blank">gerencia@inversionesjyf.com</a>
+                </p>
+                <p><i class="fa-solid fa-phone"></i> Teléfonos: <br> 989 401 670 / 958 127 586</p>
+                <p><i class="fa-brands fa-whatsapp"></i> WhatsApp: <br> <a href="https://wa.me/51989401670"
+                        target="_blank">989 401 670</a></p>
+                <div class="footer-social">
+                    <p style="margin-top: 20px;"><strong>Síguenos en Redes</strong></p>
+                    <div class="social-icons">
+                        <a href="#" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-info">
+                <p><strong>Horarios:</strong><br> Lunes a Viernes: 07:30 am - 06:00 pm. <br>Sábados: 08:00 am - 01:00
+                    pm.</p>
+                <br>
+                <p><strong>Ubicación:</strong><br> Av. Tulipán S/N, Anexo Llacuabamba, Distrito de Parcoy, Pataz - La
+                    Libertad, Perú.</p>
+                <br>
+                <p><i class="fa-solid fa-file-contract"></i> <a href="documentos/terminos-y-condiciones.pdf"
+                        download>Términos y Condiciones de Servicio</a></p>
+            </div>
+
+        </div>
+    </footer>
+
+    <div style="background: #001a33; padding: 20px 0; border-top: 1px solid rgba(255,255,255,0.1);">
+        <div class="container">
+            <p style="text-align: center; margin:0; color: rgba(255,255,255,0.6); font-size: 0.9rem;">&copy; 2026
+                Inversiones y Representaciones J & F Hrnos S.A.C. Todos los derechos reservados.</p>
+        </div>
+    </div>
+
+    <script>
+        // Obtener el ID del proyecto de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const projectId = urlParams.get('id');
+
+        if (!projectId) {
+            document.getElementById('proj-title').innerText = "Proyecto no encontrado";
+            document.getElementById('proj-desc').innerText = "Regresa al inicio para buscar un proyecto válido.";
+        } else {
+            // Cargar el JSON
+            fetch('proyectos.json')
+                .then(response => response.json())
+                .then(data => {
+                    const project = data.find(p => p.id === projectId);
+
+                    if (project) {
+                        // Actualizar la interfaz con los datos
+                        document.title = project.title + " - J&F Hrnos";
+                        document.getElementById('proj-title').innerText = project.title;
+                        document.getElementById('proj-cat').innerText = project.cat;
+                        document.getElementById('proj-desc').innerText = project.desc;
+                        document.getElementById('tech-1').innerText = project.tech1;
+                        document.getElementById('tech-2').innerText = project.tech2;
+                        document.getElementById('tech-3').innerText = project.tech3;
+                        document.getElementById('proj-client').innerText = project.client_name;
+                        document.getElementById('proj-location').innerText = project.location;
+                        document.getElementById('proj-url').href = project.client_url;
+
+                        // Arreglar ruta de imagen (el JSON tiene ../img/...)
+                        let imgPath = project.img.replace('../', '');
+                        document.getElementById('proj-img').src = imgPath;
+
+                        // Background del hero
+                        document.getElementById('hero-bg').style.backgroundImage = `linear-gradient(rgba(0,34,68,0.85), rgba(0,34,68,0.85)), url('${imgPath}')`;
+                    } else {
+                        document.getElementById('proj-title').innerText = "Proyecto no encontrado";
+                        document.getElementById('proj-desc').innerText = "El proyecto que buscas no existe.";
+                    }
+                })
+                .catch(error => {
+                    console.error('Error cargando el JSON:', error);
+                    document.getElementById('proj-title').innerText = "Error cargando datos";
+                });
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

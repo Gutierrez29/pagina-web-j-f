@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inversiones J&F Hrnos S.A.C.</title>
+    <meta name="description" content="Inversiones y Representaciones J&F Hrnos S.A.C. - Soluciones integrales en ingeniería, construcción, obras civiles, metalmecánica y transporte logístico a nivel nacional.">
+    <link rel="icon" type="image/webp" href="img/logo/logo.webp">
+    <link rel="apple-touch-icon" href="img/logo/logo.webp">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@400;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-flex">
+            <div class="logo-container">
+                <a href="#inicio"><img src="img/logo/logo.webp" alt="Logo Inversiones J&F" class="logo-img"></a>
+            </div>
+
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#experiencia">Proyectos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero-slider">
+            <div class="slides">
+                <div class="slide active">
+                    <img src="img/Inicio/hero-1.webp" alt="Ingeniería 1">
+                    <div class="slide-caption">
+                        <h1>Soluciones Integrales en Ingeniería</h1>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="img/Inicio/hero-2.webp" alt="Construcción">
+                    <div class="slide-caption">
+                        <h2>Construcción y Mantenimiento Vial</h2>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="img/Inicio/hero-3.webp" alt="Transporte">
+                    <div class="slide-caption">
+                        <h2>Logística y Transporte a Nivel Nacional</h2>
+                    </div>
+                </div>
+            </div>
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </section>
+
+        <section id="nosotros" class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">Nuestra Trayectoria y Compromiso</h2>
+                <div class="stats-row">
+                    <div class="stat-item box-shadow">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <div>
+                            <h4 class="reveal count-up" data-target="10">+0 Años</h4>
+                            <p>De Experiencia</p>
+                        </div>
+                    </div>
+                    <div class="stat-item box-shadow">
+                        <i class="fa-solid fa-building"></i>
+                        <div>
+                            <h4 class="reveal count-up" data-target="50">+0 Obras</h4>
+                            <p>Proyectos Exitosos</p>
+                        </div>
+                    </div>
+                    <div class="stat-item box-shadow">
+                        <i class="fa-solid fa-users-gear"></i>
+                        <div>
+                            <h4 class="reveal count-up" data-target="100" data-suffix="%">+0%</h4>
+                            <p>Personal Calificado</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-grid">
+                    <div class="who-we-are box-shadow reveal-left">
+                        <h3><i class="fa-solid fa-circle-info"></i> ¿Quiénes Somos?</h3>
+                        <p><strong>Inversiones y Representaciones J&F Hrnos S.A.C.</strong> es una empresa con personal
+                            calificado y disciplinado que brinda ejecución de ingeniería básica y al detalle. Nos
+                            especializamos en <a href="#servicios" class="text-link">obras de infraestructura</a>, metalmecánica, electricidad industrial e
+                            interior mina.</p>
+                        <p>Además, ofrecemos mantenimiento de carreteras, alquiler de maquinaria pesada y servicio de
+                            transporte de carga y combustibles. Contamos con amplia experiencia ejecutando trabajos
+                            constantes para el sector de la Minería y el Estado peruano.</p>
+                        <hr>
+                        <p><i class="fa-solid fa-wrench"></i> Disponemos de un <strong>amplio taller en
+                                Llacuabamba</strong> equipado con tornos, cortadoras de plasma, equipos de soldadura
+                            estacionaria y más, para desempeñar eficazmente nuestros trabajos de metalmecánica y
+                            construcción.</p>
+                    </div>
+                    <div class="values-box box-shadow reveal-right">
+                        <h3><i class="fa-solid fa-bullseye"></i> Misión y Visión</h3>
+                        <div class="mission-vision-item">
+                            <h4><i class="fa-solid fa-rocket"></i> Nuestra Misión</h4>
+                            <p>Satisfacer las necesidades de nuestros clientes brindando un servicio de ingeniería de
+                                calidad, empleando mano de obra calificada y maquinaria moderna, respetando las normas
+                                de seguridad y medio ambiente.</p>
+                        </div>
+                        <div class="mission-vision-item">
+                            <h4><i class="fa-solid fa-eye"></i> Nuestra Visión</h4>
+                            <p>Posicionarnos a nivel regional como una gran empresa de construcciones metálicas,
+                                eléctrica industrial y obras civiles, a la vanguardia tecnológica y con constante
+                                capacitación de nuestro grupo humano.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicios" class="section">
+            <div class="container">
+                <h2 class="section-title">Soluciones Logísticas y Transporte</h2>
+                <div class="services-grid">
+
+                    <article class="service-img-card reveal delay-1">
+                        <img src="img/Servicios/transporte.webp" alt="Transporte">
+                        <div class="service-img-content">
+                            <i class="fa-solid fa-truck-moving"></i>
+                            <h3>Transporte</h3>
+                            <p>Soluciones logísticas eficientes para traslado de carga pesada a nivel nacional con flota
+                                especializada.</p>
+                        </div>
+                    </article>
+
+                    <article class="service-img-card reveal delay-2">
+                        <img src="img/Servicios/maquinaria.webp" alt="Alquiler de Maquinaria">
+                        <div class="service-img-content">
+                            <i class="fa-solid fa-gears"></i>
+                            <h3>Alquiler de Maquinaria</h3>
+                            <p>Flota propia: Excavadoras (Volvo/Cat), Cargadores Frontales, Volquetes FMX, Carmix y
+                                Motoniveladoras.</p>
+                        </div>
+                    </article>
+
+                    <article class="service-img-card reveal delay-3">
+                        <img src="img/Servicios/construccion.webp" alt="Construcciones">
+                        <div class="service-img-content">
+                            <i class="fa-solid fa-trowel-bricks"></i>
+                            <h3>Construcciones</h3>
+                            <p>Proyectos integrales de infraestructura y obras civiles centrados en la calidad y
+                                durabilidad.</p>
+                        </div>
+                    </article>
+
+                    <article class="service-img-card reveal delay-4">
+                        <img src="img/Servicios/mantenimiento.webp" alt="Mantenimiento">
+                        <div class="service-img-content">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                            <h3>Mantenimiento</h3>
+                            <p>Aseguramos la operatividad y prolongamos la vida útil de sus activos con soporte
+                                preventivo.</p>
+                        </div>
+                    </article>
+
+                </div>
+
+                <div class="certifications reveal">
+                    <span><i class="fa-solid fa-id-card"></i> Conductores Homologados</span>
+                    <span><i class="fa-solid fa-file-signature"></i> Permisos MTC al día</span>
+                    <span><i class="fa-solid fa-check-double"></i> Pólizas de Seguro Vigentes</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="experiencia" class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">Nuestra Experiencia en Campo</h2>
+
+                <div class="exp-category reveal">
+                    <h3 class="category-title">1. Obras Civiles y Estructuras Metálicas</h3>
+                    <div id="grid-obras" class="project-grid">
+                        <!-- Generado dinámicamente -->
+                    </div>
+                </div>
+
+                <div class="exp-category reveal">
+                    <h3 class="category-title">2. Proyectos de Mantenimiento Vial y Soporte</h3>
+                    <div id="grid-mantenimiento" class="project-grid">
+                        <!-- Generado dinámicamente -->
+                    </div>
+                </div>
+
+                <div class="exp-category reveal">
+                    <h3 class="category-title">3. Ingeniería y Montaje Industrial</h3>
+                    <div id="grid-ingenieria" class="project-grid">
+                        <!-- Generado dinámicamente -->
+                    </div>
+                </div>
+
+                <div class="exp-category reveal">
+                    <h3 class="category-title">4. Operaciones Logísticas y Transporte MATPEL</h3>
+                    <div id="grid-logistica" class="project-grid">
+                        <!-- Generado dinámicamente -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <hr class="footer-separator">
+
+    <footer id="contacto" class="footer">
+        <div class="container footer-grid">
+
+            <div class="footer-brand">
+                <img src="img/logo/logo.webp" alt="Logo Footer" class="logo-img-footer">
+                <p class="footer-ruc">RUC: 20600435044</p>
+                <h3 class="footer-company-name">Inversiones y Representaciones J & F Hrnos S.A.C.</h3>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Contacto y Cotizaciones</h4>
+                <p><strong>Nuestros Datos</strong></p>
+                <p><i class="fa-regular fa-envelope"></i> Emails: <br> <a
+                        href="https://mail.google.com/mail/?view=cm&fs=1&to=residencia@inversionesjyf.com"
+                        target="_blank">residencia@inversionesjyf.com</a> <br>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gerencia@inversionesjyf.com"
+                        target="_blank">gerencia@inversionesjyf.com</a>
+                </p>
+                <p><i class="fa-solid fa-phone"></i> Teléfonos: <br> 989 401 670 / 958 127 586</p>
+                <p><i class="fa-brands fa-whatsapp"></i> WhatsApp: <br> <a href="https://wa.me/51989401670"
+                        target="_blank">989 401 670</a></p>
+                <div class="footer-social">
+                    <p style="margin-top: 20px;"><strong>Síguenos en Redes</strong></p>
+                    <div class="social-icons">
+                        <a href="#" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-info">
+                <p><strong>Horarios:</strong><br> Lunes a Viernes: 07:30 am - 06:00 pm. <br>Sábados: 08:00 am - 01:00
+                    pm.</p>
+                <br>
+                <p><strong>Ubicación:</strong><br> Av. Tulipán S/N, Anexo Llacuabamba, Distrito de Parcoy, Pataz - La
+                    Libertad, Perú.</p>
+                <br>
+                <p><i class="fa-solid fa-file-contract"></i> <a href="documentos/terminos-y-condiciones.pdf"
+                        download>Términos y Condiciones de Servicio</a></p>
+            </div>
+
+        </div>
+    </footer>
+
+    <div style="background: #001a33; padding: 20px 0; border-top: 1px solid rgba(255,255,255,0.1);">
+        <div class="container">
+            <p style="text-align: center; margin:0; color: rgba(255,255,255,0.6); font-size: 0.9rem;">&copy; 2026
+                Inversiones y Representaciones J & F Hrnos S.A.C. Todos los derechos reservados.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

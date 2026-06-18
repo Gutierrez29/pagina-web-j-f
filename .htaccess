@@ -1,0 +1,17 @@
+# Configuración para optimización SEO y corrección de advertencias Seobility
+
+# 1. Forzar codificación UTF-8
+AddDefaultCharset UTF-8
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # 2. Redirigir WWW a Non-WWW (Para evitar contenido duplicado)
+    # Si prefieres que el dominio principal sea con WWW, invierte esta regla.
+    RewriteCond %{HTTP_HOST} ^www\.inversionesjyf\.com [NC]
+    RewriteRule ^(.*)$ https://inversionesjyf.com/$1 [L,R=301]
+
+    # 3. Forzar HTTPS
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
