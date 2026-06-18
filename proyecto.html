@@ -2,17 +2,47 @@
 <html lang="es">
 
 <head>
+    <base href="/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cargando Proyecto... - J&F Hrnos</title>
     <meta name="description" content="Detalle de proyecto ejecutado por Inversiones y Representaciones J&F Hrnos S.A.C. Ingeniería, construcción y mantenimiento.">
+    <link id="canonical-link" rel="canonical" href="https://inversionesjyf.com/proyecto.html">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta id="og-url" property="og:url" content="https://inversionesjyf.com/proyecto.html">
+    <meta id="og-title" property="og:title" content="Cargando Proyecto... - J&F Hrnos">
+    <meta id="og-description" property="og:description" content="Detalle de proyecto ejecutado por Inversiones y Representaciones J&F Hrnos S.A.C.">
+    <meta id="og-image" property="og:image" content="https://inversionesjyf.com/img/logo/logo.webp">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta id="twitter-url" property="twitter:url" content="https://inversionesjyf.com/proyecto.html">
+    <meta id="twitter-title" property="twitter:title" content="Cargando Proyecto... - J&F Hrnos">
+    <meta id="twitter-description" property="twitter:description" content="Detalle de proyecto ejecutado por Inversiones y Representaciones J&F Hrnos S.A.C.">
+    <meta id="twitter-image" property="twitter:image" content="https://inversionesjyf.com/img/logo/logo.webp">
+
     <link rel="icon" type="image/webp" href="img/logo/logo.webp">
     <link rel="apple-touch-icon" href="img/logo/logo.webp">
+    
+    <!-- Estilos -->
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@400;600;700&display=swap"
-        rel="stylesheet">
+    
+    <!-- Carga Asíncrona de Fuentes y Iconos (Evita Render Blocking) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet"></noscript>
     <style>
         .project-detail-hero {
             background-color: var(--blue-dark);
@@ -263,7 +293,7 @@
     <header class="header">
         <div class="container header-flex">
             <div class="logo-container">
-                <a href="index.html"><img src="img/logo/logo.webp" alt="Logo J&F" class="logo-img"></a>
+                <a href="index.html"><img src="img/logo/logo.webp" alt="Logo J&F" class="logo-img" width="150" height="50"></a>
             </div>
             <nav class="navbar">
                 <ul>
@@ -300,7 +330,7 @@
             </div>
 
             <div class="project-gallery">
-                <img id="proj-img" src="" alt="Vista del Proyecto">
+                <img id="proj-img" src="" alt="Vista del Proyecto" width="600" height="400">
             </div>
         </div>
 
@@ -325,9 +355,20 @@
                         Éxito</span>
                 </div>
 
-                <a id="proj-url" href="#" target="_blank" class="btn-official">
+                <a id="proj-url" href="#" target="_blank" rel="noopener" class="btn-official">
                     <i class="fa-solid fa-globe"></i> Ver Portal Web Oficial
                 </a>
+
+                <!-- Bloque de Compartir Redes (ocultado temporalmente a petición del usuario)
+                <div class="share-box" style="margin-top: 25px; border-top: 1px solid #edf2f7; padding-top: 20px;">
+                    <h4><i class="fa-solid fa-share-nodes"></i> Compartir Proyecto</h4>
+                    <div class="share-buttons">
+                        <a id="share-fb" href="#" target="_blank" class="facebook" aria-label="Compartir en Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a id="share-ln" href="#" target="_blank" class="linkedin" aria-label="Compartir en LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a id="share-wa" href="#" target="_blank" class="whatsapp" aria-label="Compartir en WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                -->
             </div>
 
             <div class="cta-box reveal-right delay-1">
@@ -343,23 +384,22 @@
         <div class="container footer-grid">
 
             <div class="footer-brand">
-                <img src="img/logo/logo.webp" alt="Logo Footer" class="logo-img-footer">
+                <img src="img/logo/logo.webp" alt="Logo Footer" class="logo-img-footer" width="200" height="67">
                 <p class="footer-ruc">RUC: 20600435044</p>
-                <h3 class="footer-company-name">Inversiones y Representaciones J & F Hrnos S.A.C.</h3>
+                <p class="footer-company-name">Inversiones y Representaciones J & F Hrnos S.A.C.</p>
             </div>
 
             <div class="footer-contact">
-                <h4>Contacto y Cotizaciones</h4>
+                <p class="footer-heading">Contacto y Cotizaciones</p>
                 <p><strong>Nuestros Datos</strong></p>
-                <p><i class="fa-regular fa-envelope"></i> Emails: <br> <a
-                        href="https://mail.google.com/mail/?view=cm&fs=1&to=residencia@inversionesjyf.com"
-                        target="_blank">residencia@inversionesjyf.com</a> <br>
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gerencia@inversionesjyf.com"
-                        target="_blank">gerencia@inversionesjyf.com</a>
+                <p><i class="fa-regular fa-envelope"></i> Emails: <br>
+                    <span class="obfuscated-email" data-user="residencia" data-domain="inversionesjyf.com"></span> <br>
+                    <span class="obfuscated-email" data-user="gerencia" data-domain="inversionesjyf.com"></span>
                 </p>
                 <p><i class="fa-solid fa-phone"></i> Teléfonos: <br> 989 401 670 / 958 127 586</p>
                 <p><i class="fa-brands fa-whatsapp"></i> WhatsApp: <br> <a href="https://wa.me/51989401670"
-                        target="_blank">989 401 670</a></p>
+                        target="_blank" rel="noopener">989 401 670</a></p>
+                <!-- Redes sociales desactivadas temporalmente a petición del usuario
                 <div class="footer-social">
                     <p style="margin-top: 20px;"><strong>Síguenos en Redes</strong></p>
                     <div class="social-icons">
@@ -368,6 +408,7 @@
                         <a href="#" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
                     </div>
                 </div>
+                -->
             </div>
 
             <div class="footer-info">
@@ -378,7 +419,7 @@
                     Libertad, Perú.</p>
                 <br>
                 <p><i class="fa-solid fa-file-contract"></i> <a href="documentos/terminos-y-condiciones.pdf"
-                        download>Términos y Condiciones de Servicio</a></p>
+                        target="_blank" rel="noopener">Términos y Condiciones de Servicio</a></p>
             </div>
 
         </div>
@@ -392,9 +433,17 @@
     </div>
 
     <script>
-        // Obtener el ID del proyecto de la URL
+        // Obtener el ID del proyecto de la URL (soporta ?id=... y ruta limpia /proyecto/id)
         const urlParams = new URLSearchParams(window.location.search);
-        const projectId = urlParams.get('id');
+        let projectId = urlParams.get('id');
+
+        if (!projectId) {
+            const pathParts = window.location.pathname.split('/');
+            const lastPart = pathParts.pop() || pathParts.pop();
+            if (lastPart && lastPart !== 'proyecto.html' && lastPart !== 'proyecto') {
+                projectId = lastPart;
+            }
+        }
 
         if (!projectId) {
             document.getElementById('proj-title').innerText = "Proyecto no encontrado";
@@ -425,6 +474,30 @@
 
                         // Background del hero
                         document.getElementById('hero-bg').style.backgroundImage = `linear-gradient(rgba(0,34,68,0.85), rgba(0,34,68,0.85)), url('${imgPath}')`;
+
+                        // Actualizar metadatos y canonical dinámicamente para SEO (usando URL limpia)
+                        const projectUrl = `https://inversionesjyf.com/proyecto/${project.id}`;
+                        document.getElementById('canonical-link').href = projectUrl;
+                        
+                        document.getElementById('og-url').content = projectUrl;
+                        document.getElementById('og-title').content = project.title + " - J&F Hrnos";
+                        document.getElementById('og-description').content = project.desc.substring(0, 150) + "...";
+                        document.getElementById('og-image').content = `https://inversionesjyf.com/${imgPath}`;
+                        
+                        document.getElementById('twitter-url').content = projectUrl;
+                        document.getElementById('twitter-title').content = project.title + " - J&F Hrnos";
+                        document.getElementById('twitter-description').content = project.desc.substring(0, 150) + "...";
+                        document.getElementById('twitter-image').content = `https://inversionesjyf.com/${imgPath}`;
+
+                        // Configurar botones de compartir redes sociales (ocultados pero inicializados para evitar errores de JS)
+                        const shareUrl = encodeURIComponent(projectUrl);
+                        const shareTitle = encodeURIComponent(project.title + " - Inversiones J&F Hrnos");
+                        const shareFb = document.getElementById('share-fb');
+                        const shareLn = document.getElementById('share-ln');
+                        const shareWa = document.getElementById('share-wa');
+                        if (shareFb) shareFb.href = `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`;
+                        if (shareLn) shareLn.href = `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`;
+                        if (shareWa) shareWa.href = `https://api.whatsapp.com/send?text=${shareTitle}%20${shareUrl}`;
                     } else {
                         document.getElementById('proj-title').innerText = "Proyecto no encontrado";
                         document.getElementById('proj-desc').innerText = "El proyecto que buscas no existe.";
@@ -436,7 +509,7 @@
                 });
         }
     </script>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 
 </html>

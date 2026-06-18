@@ -96,47 +96,35 @@ function animateNumber(element) {
     requestAnimationFrame(update);
 }
 
-// --- CARGA DINÁMICA DE PROYECTOS EN HOME ---
-function loadProjectsHome() {
-    const grids = {
-        'Obras Civiles y Estructuras Metálicas': document.getElementById('grid-obras'),
-        'Mantenimiento Vial y Soporte Minero': document.getElementById('grid-mantenimiento'),
-        'Ingeniería y Montaje Industrial': document.getElementById('grid-ingenieria'),
-        'Operaciones Logísticas y MATPEL': document.getElementById('grid-logistica')
-    };
+// --- LÓGICA DE ACORDEÓN DE PREGUNTAS FRECUENTES (FAQ) Y DESOFUSCACIÓN ---
+document.addEventListener('DOMContentLoaded', () => {
+    // Desofuscación de correos
+    document.querySelectorAll('.obfuscated-email').forEach(el => {
+        const user = el.getAttribute('data-user');
+        const domain = el.getAttribute('data-domain');
+        if (user && domain) {
+            const email = `${user}@${domain}`;
+            el.innerHTML = `<a href="https://mail.google.com/mail/?view=cm&fs=1&to=${email}" target="_blank" rel="noopener">${email}</a>`;
+        }
+    });
 
-    if (!grids['Obras Civiles y Estructuras Metálicas']) return; // No estamos en el Home
+    // FAQ Acordeón
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+            const activeQuestion = document.querySelector('.faq-question.active');
+            if (activeQuestion && activeQuestion !== question) {
+                activeQuestion.classList.remove('active');
+                activeQuestion.nextElementSibling.style.maxHeight = null;
+            }
 
-    fetch('proyectos.json')
-        .then(response => response.json())
-        .then(data => {
-            data.forEach(project => {
-                const grid = grids[project.cat];
-                if (grid) {
-                    const card = document.createElement('div');
-                    card.className = 'project-card reveal';
-                    
-                    // Ajustar ruta de imagen (eliminar ../ si existe)
-                    const imgPath = project.img.replace('../', '');
-                    
-                    card.innerHTML = `
-                        <img src="${imgPath}" alt="${project.title}">
-                        <div class="overlay">
-                            <div class="overlay-text">
-                                <h4>${project.title}</h4>
-                                <p>${project.desc.substring(0, 80)}...</p>
-                                <a href="proyecto.html?id=${project.id}" class="saber-mas-btn">Saber más ></a>
-                            </div>
-                        </div>
-                    `;
-                    grid.appendChild(card);
-                    // Observar el nuevo elemento para la animación
-                    revealObserver.observe(card);
-                }
-            });
-        })
-        .catch(error => console.error('Error cargando proyectos:', error));
-}
-
-// Ejecutar carga al iniciar
-document.addEventListener('DOMContentLoaded', loadProjectsHome);
+            question.classList.toggle('active');
+            const answer = question.nextElementSibling;
+            if (question.classList.contains('active')) {
+                answer.style.maxHeight = answer.scrollHeight + "px";
+            } else {
+                answer.style.maxHeight = null;
+            }
+        });
+    });
+});

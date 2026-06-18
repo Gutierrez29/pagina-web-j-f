@@ -267,7 +267,9 @@ h1, h2, h3, h4, .navbar a {
     color: var(--blue-accent);
 }
 
-.stat-item h4 {
+.stat-item .stat-number {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
     font-size: 1.5rem;
     color: var(--blue-dark);
     margin-bottom: 0;
@@ -324,7 +326,9 @@ h1, h2, h3, h4, .navbar a {
     margin-bottom: 0;
 }
 
-.mission-vision-item h4 {
+.mission-vision-item .mv-title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
     color: var(--blue-dark);
     margin-bottom: 10px;
     display: flex;
@@ -483,7 +487,9 @@ h1, h2, h3, h4, .navbar a {
     transition: var(--transition);
 }
 
-.overlay-text h4 {
+.overlay-text .project-title-card {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
     margin-bottom: 10px;
     font-size: 1.2rem;
 }
@@ -546,6 +552,8 @@ h1, h2, h3, h4, .navbar a {
 }
 
 .footer-company-name {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
     font-size: 1.1rem;
     color: var(--white);
     margin-top: 15px;
@@ -560,7 +568,9 @@ h1, h2, h3, h4, .navbar a {
     padding: 5px;
 }
 
-.footer h4 {
+.footer-heading {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
     margin-bottom: 20px;
     color: var(--white);
     font-size: 1.2rem;
@@ -772,6 +782,111 @@ h1, h2, h3, h4, .navbar a {
         max-width: 150px;
         margin: 0 auto 10px auto;
     }
-
-
 }
+
+/* =========================================
+   SECCIÓN: PREGUNTAS FRECUENTES (FAQ)
+   ========================================= */
+.faq-section {
+    background-color: var(--white);
+    padding: 70px 0;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border-bottom: 1px solid #edf2f7;
+    padding: 15px 0;
+}
+
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 15px 10px;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--blue-dark);
+    font-family: 'Outfit', sans-serif;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.faq-question:hover {
+    color: var(--blue-accent);
+}
+
+.faq-question i {
+    font-size: 1rem;
+    color: var(--blue-accent);
+    transition: transform 0.3s ease;
+}
+
+.faq-question.active i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    padding: 0 10px;
+}
+
+.faq-answer p {
+    color: #4a5568;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    text-align: justify;
+}
+
+/* =========================================
+   COMPARTIR REDES (PROYECTO)
+   ========================================= */
+.share-box {
+    margin-top: 15px;
+}
+
+.share-box h4 {
+    font-size: 1.1rem;
+    color: var(--blue-dark);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.share-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.share-buttons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.share-buttons a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.share-buttons a.facebook { background-color: #1877f2; }
+.share-buttons a.linkedin { background-color: #0077b5; }
+.share-buttons a.whatsapp { background-color: #25d366; }
