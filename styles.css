@@ -174,8 +174,15 @@ h1, h2, h3, h4, .navbar a {
 }
 
 .logo-img {
-    height: 50px;
-    border-radius: 4px;
+    height: 55px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.03);
 }
 
 /* Menú oculto por defecto en PC */
