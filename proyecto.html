@@ -8,14 +8,6 @@
     <title>Cargando Proyecto... - J&F Hrnos</title>
     <meta name="description" content="Detalle de proyecto ejecutado por Inversiones y Representaciones J&F Hrnos S.A.C. Ingeniería, construcción y mantenimiento.">
     <link id="canonical-link" rel="canonical" href="https://inversionesjyf.com/proyecto.html">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
-    </script>
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -43,253 +35,10 @@
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet"></noscript>
-    <style>
-        .project-detail-hero {
-            background-color: var(--blue-dark);
-            background-position: center;
-            background-size: cover;
-            height: 380px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
-        }
-
-        .hero-badge {
-            background: var(--blue-accent);
-            color: white;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            display: inline-block;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .project-layout {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 40px;
-            padding: 60px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        @media (max-width: 900px) {
-            .project-layout {
-                grid-template-columns: 1fr;
-                padding: 30px 15px;
-                gap: 30px;
-            }
-
-            .hero-title {
-                font-size: 2.2rem !important;
-            }
-
-            .project-detail-hero {
-                height: 250px;
-            }
-
-            .tech-list {
-                grid-template-columns: 1fr !important;
-            }
-
-            .sidebar {
-                position: static;
-            }
-        }
-
-        .back-btn {
-            display: inline-block;
-            margin-bottom: 20px;
-            color: var(--blue-accent);
-            text-decoration: none;
-            font-weight: bold;
-            font-family: 'Outfit', sans-serif;
-            font-size: 1.1rem;
-            transition: 0.3s;
-            position: sticky;
-            top: 100px;
-            z-index: 10;
-            background: rgba(248, 250, 252, 0.9);
-            padding: 5px 10px;
-            border-radius: 4px;
-        }
-
-        .back-btn:hover {
-            text-decoration: underline;
-            color: var(--blue-dark);
-            transform: translateX(-5px);
-            display: inline-block;
-        }
-
-        .main-content h2 {
-            color: var(--blue-dark);
-            font-size: 2.2rem;
-            margin-bottom: 20px;
-        }
-
-        .main-content p {
-            font-size: 1.15rem;
-            line-height: 1.8;
-            color: var(--text-dark);
-            margin-bottom: 30px;
-            text-align: justify;
-        }
-
-        .tech-list {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin-bottom: 40px;
-        }
-
-        .tech-item {
-            background: #f8fafc;
-            padding: 15px 20px;
-            border-radius: 8px;
-            border-left: 4px solid var(--blue-accent);
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .tech-item i {
-            color: var(--blue-accent);
-            font-size: 1.2rem;
-        }
-
-        .tech-item span {
-            font-weight: 600;
-            color: var(--blue-dark);
-        }
-
-        .project-gallery img {
-            width: 100%;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-        }
-
-        .sidebar {
-            position: sticky;
-            top: 100px;
-            align-self: start;
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-        }
-
-        .sidebar-card {
-            background: white;
-            border-radius: 12px;
-            padding: 35px;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
-        }
-
-        .sidebar-card h3 {
-            color: var(--blue-dark);
-            border-bottom: 2px solid #edf2f7;
-            padding-bottom: 15px;
-            margin-bottom: 20px;
-            font-size: 1.5rem;
-        }
-
-        .info-row {
-            margin-bottom: 20px;
-        }
-
-        .info-row span.label {
-            display: block;
-            font-size: 0.9rem;
-            color: #718096;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 5px;
-        }
-
-        .info-row span.value {
-            display: block;
-            font-size: 1.1rem;
-            color: var(--blue-dark);
-            font-weight: 600;
-        }
-
-        .info-row i {
-            color: var(--blue-accent);
-            margin-right: 8px;
-            width: 20px;
-            text-align: center;
-        }
-
-        .btn-official {
-            display: block;
-            background: var(--blue-dark);
-            color: white;
-            padding: 15px 20px;
-            border-radius: 6px;
-            text-align: center;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1rem;
-            margin-top: 30px;
-            transition: 0.3s;
-        }
-
-        .btn-official:hover {
-            background: var(--blue-accent);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 168, 255, 0.3);
-        }
-
-        .cta-box {
-            background: linear-gradient(135deg, var(--blue-accent), var(--blue-dark));
-            border-radius: 12px;
-            padding: 35px;
-            text-align: center;
-            color: white;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-        }
-
-        .cta-box h4 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: white;
-            font-weight: 700;
-        }
-
-        .cta-box p {
-            font-size: 1.05rem;
-            margin-bottom: 25px;
-            color: #e2e8f0;
-            line-height: 1.6;
-        }
-
-        .btn-cta {
-            display: block;
-            background: white;
-            color: var(--blue-dark);
-            padding: 15px 20px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1rem;
-            transition: 0.3s;
-        }
-
-        .btn-cta:hover {
-            background: #f8fafc;
-            color: var(--blue-accent);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
-        }
-    </style>
 </head>
 
 <body class="bg-light">
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
     <header class="header">
         <div class="container header-flex">
             <div class="logo-container">
@@ -312,7 +61,7 @@
         </div>
     </div>
 
-    <div class="project-layout">
+    <div class="project-layout" id="main-content">
         <div class="main-content reveal-left">
             <a href="index.html#experiencia" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Volver al listado
                 de proyectos</a>
@@ -396,7 +145,9 @@
                     <span class="obfuscated-email" data-user="residencia" data-domain="inversionesjyf.com"></span> <br>
                     <span class="obfuscated-email" data-user="gerencia" data-domain="inversionesjyf.com"></span>
                 </p>
-                <p><i class="fa-solid fa-phone"></i> Teléfonos: <br> 989 401 670 / 958 127 586</p>
+                <p><i class="fa-solid fa-phone"></i> Teléfonos: <br>
+                    <a href="tel:+51989401670">989 401 670</a> / <a href="tel:+51958127586">958 127 586</a>
+                </p>
                 <p><i class="fa-brands fa-whatsapp"></i> WhatsApp: <br> <a href="https://wa.me/51989401670"
                         target="_blank" rel="noopener">989 401 670</a></p>
                 <!-- Redes sociales desactivadas temporalmente a petición del usuario
@@ -433,81 +184,98 @@
     </div>
 
     <script>
-        // Obtener el ID del proyecto de la URL (soporta ?id=... y ruta limpia /proyecto/id)
-        const urlParams = new URLSearchParams(window.location.search);
-        let projectId = urlParams.get('id');
+        (function() {
+            'use strict';
+            const urlParams = new URLSearchParams(window.location.search);
+            let projectId = urlParams.get('id');
 
-        if (!projectId) {
-            const pathParts = window.location.pathname.split('/');
-            const lastPart = pathParts.pop() || pathParts.pop();
-            if (lastPart && lastPart !== 'proyecto.html' && lastPart !== 'proyecto') {
-                projectId = lastPart;
+            if (!projectId) {
+                const pathParts = window.location.pathname.split('/');
+                const lastPart = pathParts.pop() || pathParts.pop();
+                if (lastPart && lastPart !== 'proyecto.html' && lastPart !== 'proyecto') {
+                    projectId = decodeURIComponent(lastPart);
+                }
             }
-        }
 
-        if (!projectId) {
-            document.getElementById('proj-title').innerText = "Proyecto no encontrado";
-            document.getElementById('proj-desc').innerText = "Regresa al inicio para buscar un proyecto válido.";
-        } else {
-            // Cargar el JSON
+            const titleEl = document.getElementById('proj-title');
+            const descEl = document.getElementById('proj-desc');
+
+            if (!projectId) {
+                if (titleEl) titleEl.textContent = "Proyecto no especificado";
+                if (descEl) descEl.innerHTML = 'No se ha indicado un proyecto válido. <a href="index.html#experiencia" class="text-link">Regresar al catálogo</a>.';
+                return;
+            }
+
             fetch('proyectos.json')
-                .then(response => response.json())
+                .then(response => {
+                    if (!response.ok) throw new Error('Error de red al cargar proyectos');
+                    return response.json();
+                })
                 .then(data => {
                     const project = data.find(p => p.id === projectId);
 
                     if (project) {
-                        // Actualizar la interfaz con los datos
-                        document.title = project.title + " - J&F Hrnos";
-                        document.getElementById('proj-title').innerText = project.title;
-                        document.getElementById('proj-cat').innerText = project.cat;
-                        document.getElementById('proj-desc').innerText = project.desc;
-                        document.getElementById('tech-1').innerText = project.tech1;
-                        document.getElementById('tech-2').innerText = project.tech2;
-                        document.getElementById('tech-3').innerText = project.tech3;
-                        document.getElementById('proj-client').innerText = project.client_name;
-                        document.getElementById('proj-location').innerText = project.location;
-                        document.getElementById('proj-url').href = project.client_url;
+                        document.title = `${project.title} - Inversiones J&F Hrnos`;
+                        if (titleEl) titleEl.textContent = project.title;
+                        
+                        const catEl = document.getElementById('proj-cat');
+                        if (catEl) catEl.textContent = project.cat;
+                        if (descEl) descEl.textContent = project.desc;
+                        
+                        const t1 = document.getElementById('tech-1');
+                        const t2 = document.getElementById('tech-2');
+                        const t3 = document.getElementById('tech-3');
+                        if (t1) t1.textContent = project.tech1;
+                        if (t2) t2.textContent = project.tech2;
+                        if (t3) t3.textContent = project.tech3;
+                        
+                        const clientEl = document.getElementById('proj-client');
+                        const locEl = document.getElementById('proj-location');
+                        const urlEl = document.getElementById('proj-url');
+                        if (clientEl) clientEl.textContent = project.client_name;
+                        if (locEl) locEl.textContent = project.location;
+                        if (urlEl) urlEl.href = project.client_url;
 
-                        // Arreglar ruta de imagen (el JSON tiene ../img/...)
-                        let imgPath = project.img.replace('../', '');
-                        document.getElementById('proj-img').src = imgPath;
+                        const imgPath = project.img;
+                        const projImg = document.getElementById('proj-img');
+                        if (projImg) {
+                            projImg.src = imgPath;
+                            projImg.alt = project.title;
+                        }
 
-                        // Background del hero
-                        document.getElementById('hero-bg').style.backgroundImage = `linear-gradient(rgba(0,34,68,0.85), rgba(0,34,68,0.85)), url('${imgPath}')`;
+                        const heroBg = document.getElementById('hero-bg');
+                        if (heroBg) {
+                            heroBg.style.backgroundImage = `linear-gradient(rgba(0,34,68,0.85), rgba(0,34,68,0.85)), url('${imgPath}')`;
+                        }
 
-                        // Actualizar metadatos y canonical dinámicamente para SEO (usando URL limpia)
                         const projectUrl = `https://inversionesjyf.com/proyecto/${project.id}`;
-                        document.getElementById('canonical-link').href = projectUrl;
+                        const canonicalEl = document.getElementById('canonical-link');
+                        if (canonicalEl) canonicalEl.href = projectUrl;
                         
-                        document.getElementById('og-url').content = projectUrl;
-                        document.getElementById('og-title').content = project.title + " - J&F Hrnos";
-                        document.getElementById('og-description').content = project.desc.substring(0, 150) + "...";
-                        document.getElementById('og-image').content = `https://inversionesjyf.com/${imgPath}`;
+                        const setMeta = (id, val) => {
+                            const el = document.getElementById(id);
+                            if (el) el.setAttribute('content', val);
+                        };
                         
-                        document.getElementById('twitter-url').content = projectUrl;
-                        document.getElementById('twitter-title').content = project.title + " - J&F Hrnos";
-                        document.getElementById('twitter-description').content = project.desc.substring(0, 150) + "...";
-                        document.getElementById('twitter-image').content = `https://inversionesjyf.com/${imgPath}`;
-
-                        // Configurar botones de compartir redes sociales (ocultados pero inicializados para evitar errores de JS)
-                        const shareUrl = encodeURIComponent(projectUrl);
-                        const shareTitle = encodeURIComponent(project.title + " - Inversiones J&F Hrnos");
-                        const shareFb = document.getElementById('share-fb');
-                        const shareLn = document.getElementById('share-ln');
-                        const shareWa = document.getElementById('share-wa');
-                        if (shareFb) shareFb.href = `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`;
-                        if (shareLn) shareLn.href = `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`;
-                        if (shareWa) shareWa.href = `https://api.whatsapp.com/send?text=${shareTitle}%20${shareUrl}`;
+                        setMeta('og-url', projectUrl);
+                        setMeta('og-title', `${project.title} - Inversiones J&F Hrnos`);
+                        setMeta('og-description', project.desc.substring(0, 150) + '...');
+                        setMeta('og-image', `https://inversionesjyf.com/${imgPath}`);
+                        setMeta('twitter-url', projectUrl);
+                        setMeta('twitter-title', `${project.title} - Inversiones J&F Hrnos`);
+                        setMeta('twitter-description', project.desc.substring(0, 150) + '...');
+                        setMeta('twitter-image', `https://inversionesjyf.com/${imgPath}`);
                     } else {
-                        document.getElementById('proj-title').innerText = "Proyecto no encontrado";
-                        document.getElementById('proj-desc').innerText = "El proyecto que buscas no existe.";
+                        if (titleEl) titleEl.textContent = "Proyecto no encontrado";
+                        if (descEl) descEl.innerHTML = 'El proyecto solicitado no existe en nuestro registro. <a href="index.html#experiencia" class="text-link">Ver proyectos disponibles</a>.';
                     }
                 })
                 .catch(error => {
-                    console.error('Error cargando el JSON:', error);
-                    document.getElementById('proj-title').innerText = "Error cargando datos";
+                    console.error('Error cargando proyectos:', error);
+                    if (titleEl) titleEl.textContent = "Error de conexión";
+                    if (descEl) descEl.textContent = "No fue posible cargar los datos del proyecto. Por favor, reintenta.";
                 });
-        }
+        })();
     </script>
     <script src="script.js" defer></script>
 </body>
